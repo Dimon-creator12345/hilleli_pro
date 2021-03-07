@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import Wrapper from './components/Wrapper'
+import fetchUsers from './utils'
 
 const App=()=>{
     const [dataUsers,setDataUsers]=useState([]);
-    // Api
-    useEffect(async ()=>{
-        let result=await fetch('http://localhost:3000/');
-        let data=await result.json();
-        setDataUsers(data);
+
+    useEffect(()=>{
+        fetchUsers(setDataUsers);
     },[])
 
 // -------------

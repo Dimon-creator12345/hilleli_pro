@@ -1,5 +1,4 @@
 const Wrapper = ({ dataUsers }) => {
-  console.log(dataUsers)
   let users = dataUsers.map((item, index) => {
     return (
       <div className="card" key={item.id}>
